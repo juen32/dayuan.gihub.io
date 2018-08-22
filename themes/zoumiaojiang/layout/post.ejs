@@ -1,0 +1,168 @@
+---
+layout: layout
+---
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+                <%- page.content %>
+                <p style="font-weight:bold;">欢迎大家扫码关注我的微信公众号「江哥乱谈」，关注我更多的文章动态。</p>
+                <img src="/img/qrcode.jpg" style="border:none;">
+                <blockquote>
+                本文为原创文章，会经常更新知识点以及修正一些错误，因此转载请保留原出处，方便溯源，避免陈旧错误知识的误导，同时有更好的阅读体验。 <br/>
+                转载请注明来源：<a href="<%- page.permalink%>" rel="noopener" title="<%- page.permalink%>"><%- page.permalink%></a>
+                </blockquote>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <% if (page.prev){ %>
+                        <li class="previous">
+                            <a href="<%- config.root %><%- page.prev.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.prev.title %>">&larr; Previous Post</a>
+                        </li>
+                    <% } %>
+                    <% if (page.next){ %>
+                        <li class="next">
+                            <a href="<%- config.root %><%- page.next.path %>" data-toggle="tooltip" data-placement="top" title="<%- page.next.title %>">Next Post &rarr;</a>
+                        </li>
+                    <% } %>
+                </ul>
+
+                <!-- disqus comment start -->
+                <% if(config['disqus_username']) { %>
+                    <div class="comment">
+                        <div id="disqus_thread" class="disqus-thread"></div>
+                    </div>
+                <% } %>
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <%- partial('_partial/toc') %>
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                <% if(config['featured-tags']) { %>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="<%= config.root %>tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       <% page.tags.forEach(function(tag){ %>
+                          <a class="tag" href="<%= config.root %>tags/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %></a>
+                        <% }) %>
+                    </div>
+                </section>
+                <% }%>
+
+                <!-- Friends Blog -->
+                <% if(config.friends) { %>
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    <% config.friends.forEach(function(friend){ %>
+                        <li><a href="<%= friend.href %>" target="_blank"><%= friend.title %></a></li>
+                    <% }); %>
+                </ul>
+                <% }%>
+
+                <!-- github isuue comment container-->
+                <% if (config.github_issue_comments) {%>
+                    <hr>
+                    <div id="comments-container"></div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</article>
+
+<% if(config['disqus_username']) { %>
+<!-- disqus embedded js code start (one page only need to embed once) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "<%= config['disqus_username'] %>";
+    var disqus_identifier = "<%= page.permalink %>";
+    var disqus_url = "<%= page.permalink %>";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus embedded js code start end -->
+<% } %>
+
+<% if (config.github_issue_comments) {%>
+<!-- github issue comment embedded js start -->
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '<%= page.permalink %>', // 可选。默认为 location.href
+        owner: '<%= config.github_issue_comments %>',
+        repo: '<%= config.github_issue_comments %>.github.io',
+        oauth: {
+            client_id: 'da14bf98138076476f70',
+            client_secret: 'a7ce31d619df43bd15798cc9f05996a6aa8f36d2',
+        }
+    })
+    gitment.render('comments-container');
+</script>
+<!-- github issue embedded js code start end -->
+<% } %>
+
+
+<% if(config['anchorjs']) { %>
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: ''
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+        // hack for hexo toc helper's bug
+        var anchorlinks = document.querySelectorAll('.anchorjs-link');
+        var links = document.querySelectorAll('.toc-nav-link');
+
+        for (var i = 0; i < anchorlinks.length; i++) {
+            links[i].href = anchorlinks[i].href;
+        }
+    });
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+<% } %>

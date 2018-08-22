@@ -1,0 +1,79 @@
+# ========== Profile ========== #
+# avatar
+avatar: /avatar/kumamon.jpg
+# author name
+author: 林大元
+# signature
+signature: witness me
+# SNS
+social:
+  email: 519872612@qq.com
+  github: https://github.com/juen32
+  weibo: https://weibo.com/u/2152296344
+  zhihu: https://www.zhihu.com/people/lin-da-yuan-71/activities
+  # facebook:
+  # twitter:
+  # instagram:
+  # stack-overflow:
+  # linkedin:
+  # others:
+  rss: /atom.xml
+# friends
+friends:
+  # friendA: //www.baidu.com
+  # friendB: //www.google.com
+  # friendC :
+about:
+  enable: true
+  image: '/intro/about-page.jpg'
+
+# ========== Site ========== #
+# title of the site
+SEO_title: 林大元的博客 - Dayuan's Blog
+# main title
+main_title: Dayuan's Blog.
+# subtitle
+subtitle: it's better to burn out than to fade away
+# site haeder image
+site_header_image: 'http://oumn0o088.bkt.clouddn.com/intro-desktop.jpg'
+# post haeder image
+post_header_image: 'http://oumn0o088.bkt.clouddn.com/post-bg.jpg'
+# 404 image
+_404_image: 'http://oumn0o088.bkt.clouddn.com/404.jpg'
+
+# ========== Comment ========== #
+# Fill in the field to enable the corresponding comment plugin
+# If you want to add other comment plugin, edit in "custom.ejs"
+comment:
+  # livere  site: https://livere.com/
+  livere_uid: MTAyMC8zMzE4MC85NzM3
+  # disqus  site: https://disqus.com/
+  disqus_shortname:
+  # changyan  site: http://changyan.kuaizhan.com/
+  changyan_appid:
+  changyan_conf:
+  # gitment  site: https://github.com/imsun/gitment
+  # gitment_owner: juen32
+  # gitment_repo: one
+  # gitment_client_id: 44f8f9a52f85a2a436d8
+  # gitment_client_secret: ae514f0ca6b3899f421477fdb19eea563d72ab61
+  # youyan  site: http://www.uyan.cc/
+  youyan_uid:
+
+# ========== Analytics ========== #
+# Busuanzi pv Analytics
+busuanzi: true
+# Baidu analytics
+baidu_analytics:
+# Google analytics
+google_analytics:
+# CNZZ analytics
+CNZZ_analytics:
+
+# ========== Others ========== #
+# favicon
+favicon: /assets/favicon.ico
+# truncate length (the default is 300)
+truncate_length:
+# enable toc
+toc: true

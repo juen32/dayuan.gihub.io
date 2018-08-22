@@ -1,0 +1,60 @@
+---
+layout: page
+---
+<style type="text/css">
+    header.intro-header{
+        background-position: right; 
+    }
+</style>
+<!-- Chinese Version -->
+<div class="zh post-container">
+    <%- page.content %>
+
+    <!-- github isuue comment container-->
+    <% if (config.github_issue_comments) {%>
+        <hr>
+        <div id="comments-container"></div>
+    <% } %>
+</div>
+
+<% if(config['disqus_username']) { %>
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread"></div>
+</div>
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "<%= config['disqus_username'] %>";
+    var disqus_identifier = "<%= page.permalink %>";
+    var disqus_url = "<%= page.permalink %>";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+<% } %>
+
+
+<% if (config.github_issue_comments) {%>
+<!-- github issue comment embedded js start -->
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '<%= page.permalink %>', // 可选。默认为 location.href
+        owner: '<%= config.github_issue_comments %>',
+        repo: '<%= config.github_issue_comments %>.github.io',
+        oauth: {
+            client_id: 'da14bf98138076476f70',
+            client_secret: 'a7ce31d619df43bd15798cc9f05996a6aa8f36d2',
+        }
+    })
+    gitment.render('comments-container');
+</script>
+<!-- github issue embedded js code start end -->
+<% } %>
+
