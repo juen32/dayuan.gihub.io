@@ -9,13 +9,10 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="React生命周期图解
-
-详细说明
-生命周期包含4种情况：组件初始化装载时候，组件属性改变时候，组件状态改变时候，组件被销毁时候
+详细说明生命周期包含4种情况：组件初始化装载时候，组件属性改变时候，组件状态改变时候，组件被销毁时候
 生命周期共提供了10个不同的API。
-defaultProps
-ES6使用defaultProps()方法，ES5中getDefaultProps()方法。只调用一次，返回对象用于设置默认的props，但是对于引用值会在各个实例中共享。
-constructor(p...">
+defaultPropsES6使用defaultProps()方法，ES5中getDefaultProps()方法。只调用一次，返回对象用于设置默认的props，但是对于引用值会在各个实例中共享。
+constructor(prop...">
     <meta name="keyword"  content=" React">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
@@ -232,19 +229,13 @@ constructor(p...">
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-                <h1>React生命周期图解</h1>
-<p><img src="/article/React生命周期详解/React%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AF%A6%E8%A7%A3/react_life_cycle.png" alt="React生命周期图解"></p>
-<h1>详细说明</h1>
-<p>生命周期包含4种情况：组件初始化装载时候，组件属性改变时候，组件状态改变时候，组件被销毁时候</p>
+                <h1 id="React生命周期图解"><a href="#React生命周期图解" class="headerlink" title="React生命周期图解"></a>React生命周期图解</h1><p><img src="/article/React生命周期详解/react_life_cycle.png" alt="React生命周期图解"></p>
+<h1 id="详细说明"><a href="#详细说明" class="headerlink" title="详细说明"></a>详细说明</h1><p>生命周期包含4种情况：组件初始化装载时候，组件属性改变时候，组件状态改变时候，组件被销毁时候</p>
 <p>生命周期共提供了10个不同的API。</p>
-<h2>defaultProps</h2>
-<p>ES6使用defaultProps()方法，ES5中getDefaultProps()方法。只调用一次，返回对象用于设置默认的props，但是对于引用值会在各个实例中共享。</p>
-<h2>constructor(props)</h2>
-<p>构造函数，实例创建的时候调用，主要为了初始化state或绑定this，ES5中用getInitialState()</p>
-<h2>componentWillMount()</h2>
-<p>第一次渲染阶段在调用render方法前会调用，此时仍然可以修改组件的state</p>
-<h2>render()</h2>
-<p>必选方法，创建虚拟DOM，该方法具有特殊规则：</p>
+<h2 id="defaultProps"><a href="#defaultProps" class="headerlink" title="defaultProps"></a>defaultProps</h2><p>ES6使用defaultProps()方法，ES5中getDefaultProps()方法。只调用一次，返回对象用于设置默认的props，但是对于引用值会在各个实例中共享。</p>
+<h2 id="constructor-props"><a href="#constructor-props" class="headerlink" title="constructor(props)"></a>constructor(props)</h2><p>构造函数，实例创建的时候调用，主要为了初始化state或绑定this，ES5中用getInitialState()</p>
+<h2 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount()"></a>componentWillMount()</h2><p>第一次渲染阶段在调用render方法前会调用，此时仍然可以修改组件的state</p>
+<h2 id="render"><a href="#render" class="headerlink" title="render()"></a>render()</h2><p>必选方法，创建虚拟DOM，该方法具有特殊规则：</p>
 <ul>
 <li>只能通过this.props和this.state访问数据</li>
 <li>可以返回null、false或任何React组件</li>
@@ -252,22 +243,16 @@ constructor(p...">
 <li>不能改变组件的状态state</li>
 <li>不能修改DOM的输出</li>
 </ul>
-<h2>componentDidMount</h2>
-<p>首次装载渲染完成，真实的DOM被渲染出来后调用，可以做一些依赖DOM的操作，比如利用refs获取DOM。子组件比父组件优先渲染，所以可以获取子组件对应的DOM。</p>
+<h2 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h2><p>首次装载渲染完成，真实的DOM被渲染出来后调用，可以做一些依赖DOM的操作，比如利用refs获取DOM。子组件比父组件优先渲染，所以可以获取子组件对应的DOM。</p>
 <p>注意：在服务端中，该方法不会被调用！</p>
-<h2>componentWillReciveProps(nextProps)</h2>
-<p>组件接受到新的props时候调用，此时可以根据nextProps来修改state。</p>
+<h2 id="componentWillReciveProps-nextProps"><a href="#componentWillReciveProps-nextProps" class="headerlink" title="componentWillReciveProps(nextProps)"></a>componentWillReciveProps(nextProps)</h2><p>组件接受到新的props时候调用，此时可以根据nextProps来修改state。</p>
 <p>注意：这个时候虽然说是获取新的属性，但是并不能保证属性一定发生了改变。</p>
-<h2>shouldComponentUpdate(nextProps, nextState)</h2>
-<p>接受到新的属性或者新的状态的时候在render前会被调用。除了调用forceUpdate和初始化渲染以外。</p>
+<h2 id="shouldComponentUpdate-nextProps-nextState"><a href="#shouldComponentUpdate-nextProps-nextState" class="headerlink" title="shouldComponentUpdate(nextProps, nextState)"></a>shouldComponentUpdate(nextProps, nextState)</h2><p>接受到新的属性或者新的状态的时候在render前会被调用。除了调用forceUpdate和初始化渲染以外。</p>
 <p>该方法让我们有机会决定是否重新渲染组件，返回false，那么不会重新渲染组件，借此可以优化性能，除非特殊情况比如在组件很多性能瓶颈，大多数情况不推荐使用。</p>
-<h2>componentWillUpdate(nextProps, nextState)</h2>
-<p>当组件确定要更新，render之前被调用。</p>
+<h2 id="componentWillUpdate-nextProps-nextState"><a href="#componentWillUpdate-nextProps-nextState" class="headerlink" title="componentWillUpdate(nextProps, nextState)"></a>componentWillUpdate(nextProps, nextState)</h2><p>当组件确定要更新，render之前被调用。</p>
 <p>这个时候可以确定一定会更新组件，可以执行更新前的操作。此时不能更新修改state和props！</p>
-<h2>componentDitUpdate()</h2>
-<p>完成渲染新的props或者state后调用，此时可以访问到新的DOM元素。</p>
-<h2>componentWillUnmount()</h2>
-<p>组件被卸载之前调用，可以用于做一些清理工作，在componentDidMount方法中添加的所有任务都需要在该方法中撤销，比如创建的定时器或添加的事件监听器。</p>
+<h2 id="componentDitUpdate"><a href="#componentDitUpdate" class="headerlink" title="componentDitUpdate()"></a>componentDitUpdate()</h2><p>完成渲染新的props或者state后调用，此时可以访问到新的DOM元素。</p>
+<h2 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount()"></a>componentWillUnmount()</h2><p>组件被卸载之前调用，可以用于做一些清理工作，在componentDidMount方法中添加的所有任务都需要在该方法中撤销，比如创建的定时器或添加的事件监听器。</p>
 
                 <blockquote>
                 本文为原创文章，会经常更新知识点以及修正一些错误，因此转载请保留原出处，方便溯源，避免陈旧错误知识的误导，同时有更好的阅读体验。 <br/>
@@ -297,7 +282,7 @@ constructor(p...">
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">React生命周期图解</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">详细说明</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">defaultProps</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">constructor(props)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentWillMount()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">render()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentDidMount</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentWillReciveProps(nextProps)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">shouldComponentUpdate(nextProps, nextState)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentWillUpdate(nextProps, nextState)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentDitUpdate()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">componentWillUnmount()</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#React生命周期图解"><span class="toc-nav-text">React生命周期图解</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#详细说明"><span class="toc-nav-text">详细说明</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#defaultProps"><span class="toc-nav-text">defaultProps</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#constructor-props"><span class="toc-nav-text">constructor(props)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentWillMount"><span class="toc-nav-text">componentWillMount()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#render"><span class="toc-nav-text">render()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentDidMount"><span class="toc-nav-text">componentDidMount</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentWillReciveProps-nextProps"><span class="toc-nav-text">componentWillReciveProps(nextProps)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#shouldComponentUpdate-nextProps-nextState"><span class="toc-nav-text">shouldComponentUpdate(nextProps, nextState)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentWillUpdate-nextProps-nextState"><span class="toc-nav-text">componentWillUpdate(nextProps, nextState)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentDitUpdate"><span class="toc-nav-text">componentDitUpdate()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#componentWillUnmount"><span class="toc-nav-text">componentWillUnmount()</span></a></li></ol></li></ol>
         
         </div>
       </aside>
