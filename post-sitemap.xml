@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://dayuan.tech/article/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
+        <lastmod>2018-08-23T05:14:27.218Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://dayuan.tech/article/%E4%BD%BF%E7%94%A8create-react-app%E6%B7%BB%E5%8A%A0css%20modules%E3%80%81sasss%E5%92%8Cantd/</loc>
         <lastmod>2018-08-22T06:56:31.941Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,14 +40,6 @@
 
     <url>
         <loc>https://dayuan.tech/article/http%E8%AF%B7%E6%B1%82/</loc>
-        <lastmod>2018-08-22T06:41:00.405Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://dayuan.tech/article/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</loc>
         <lastmod>2018-08-22T06:41:00.405Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

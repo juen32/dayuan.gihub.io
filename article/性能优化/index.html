@@ -8,10 +8,15 @@
     <meta name="baidu-site-verification" content="aUkeDDBeAZ" />
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Web前端性能优化桌面端优化减少HTTP资源请求数透过构建工具合并雪碧图、CSS、JS文件。来减少资源的请求，避免重复的资源。
-减少HTTP请求大小除了减少资源次数，也要尽量减小每个HTTP请求的大小。使用gzip压缩传输内容。
-将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入在HTML文件中应用外部资源可以有效的利用浏览器的静态资源缓存
-123&l...">
+    <meta name="description" content="Web前端性能优化
+桌面端优化
+减少HTTP资源请求数
+透过构建工具合并雪碧图、CSS、JS文件。来减少资源的请求，避免重复的资源。
+减少HTTP请求大小
+除了减少资源次数，也要尽量减小每个HTTP请求的大小。使用gzip压缩传输内容。
+将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入
+在HTML文件中应用外部资源可以有效的利用浏览器的静态资源缓存
+...">
     <meta name="keyword"  content=" 性能优化">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
@@ -160,14 +165,14 @@
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
@@ -228,27 +233,49 @@
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-                <h1 id="Web前端性能优化"><a href="#Web前端性能优化" class="headerlink" title="Web前端性能优化"></a>Web前端性能优化</h1><h2 id="桌面端优化"><a href="#桌面端优化" class="headerlink" title="桌面端优化"></a>桌面端优化</h2><h3 id="减少HTTP资源请求数"><a href="#减少HTTP资源请求数" class="headerlink" title="减少HTTP资源请求数"></a>减少HTTP资源请求数</h3><p>透过构建工具合并雪碧图、CSS、JS文件。来减少资源的请求，避免重复的资源。</p>
-<h3 id="减少HTTP请求大小"><a href="#减少HTTP请求大小" class="headerlink" title="减少HTTP请求大小"></a>减少HTTP请求大小</h3><p>除了减少资源次数，也要尽量减小每个HTTP请求的大小。使用gzip压缩传输内容。</p>
-<h3 id="将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入"><a href="#将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入" class="headerlink" title="将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入"></a>将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入</h3><p>在HTML文件中应用外部资源可以有效的利用浏览器的静态资源缓存</p>
+                <h1>Web前端性能优化</h1>
+<h2>桌面端优化</h2>
+<h3>减少HTTP资源请求数</h3>
+<p>透过构建工具合并雪碧图、CSS、JS文件。来减少资源的请求，避免重复的资源。</p>
+<h3>减少HTTP请求大小</h3>
+<p>除了减少资源次数，也要尽量减小每个HTTP请求的大小。使用gzip压缩传输内容。</p>
+<h3>将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入</h3>
+<p>在HTML文件中应用外部资源可以有效的利用浏览器的静态资源缓存</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//cdn.domain.com/path/main.css"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.domain.com/path/main.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="为HTML制定Cache-Control或Expires"><a href="#为HTML制定Cache-Control或Expires" class="headerlink" title="为HTML制定Cache-Control或Expires"></a>为HTML制定Cache-Control或Expires</h3><p>为HTML内容设置Cache-Control或者Expires可以将HTML内容缓存起来,在页面的Cache-Control或Expires头部有效的时候，浏览器直接从缓存中读取内容。</p>
-<h3 id="设置Etag和Last-Modified"><a href="#设置Etag和Last-Modified" class="headerlink" title="设置Etag和Last-Modified"></a>设置Etag和Last-Modified</h3><p>合理设置Etag和last-Modified使用浏览器缓存，对于未修改的文件，静态资源服务器会向浏览器返回304，让浏览器从缓存中读取文件。</p>
-<h3 id="减少页面重定向"><a href="#减少页面重定向" class="headerlink" title="减少页面重定向"></a>减少页面重定向</h3><p>页面每次重定向都会延迟页面内容返回等待时间，一次重定向大约需要600ms的时间开销，为了保证用户尽快看到页面内容，要竟然避免重定向</p>
-<h3 id="使用静态资源分域存放增加下载并行数"><a href="#使用静态资源分域存放增加下载并行数" class="headerlink" title="使用静态资源分域存放增加下载并行数"></a>使用静态资源分域存放增加下载并行数</h3><p>浏览器在同一时刻向同一个域名请求文件的并行下载数是有限的，因此可以利用多个域名的主机来存放不同的静态资源，增大页面的加载时资源的并行下载数，缩短页面资源加载的时间。通常根据多个域名来分别存储javaScirpt、CSS和图片文件。</p>
-<h3 id="使用静态资源CDN来存储文件"><a href="#使用静态资源CDN来存储文件" class="headerlink" title="使用静态资源CDN来存储文件"></a>使用静态资源CDN来存储文件</h3><p>如果条件允许，可以利用CDN网络加快同一个地理区域内重复静态资源文件的响应下载速度，缩短资源请求时间。</p>
-<h3 id="使用CDN-Combo-下载传输内容"><a href="#使用CDN-Combo-下载传输内容" class="headerlink" title="使用CDN Combo 下载传输内容"></a>使用CDN Combo 下载传输内容</h3><p>CDN Combo是在CDN服务器端将多个文件请求打包成个一个文件的形式来返回的技术，这样可以实现HTTP连接传输的一次性复用，减少浏览器的HTTP请求速，加快资源下载的速度。</p>
+<h3>为HTML制定Cache-Control或Expires</h3>
+<p>为HTML内容设置Cache-Control或者Expires可以将HTML内容缓存起来,在页面的Cache-Control或Expires头部有效的时候，浏览器直接从缓存中读取内容。</p>
+<h3>设置Etag和Last-Modified</h3>
+<p>合理设置Etag和last-Modified使用浏览器缓存，对于未修改的文件，静态资源服务器会向浏览器返回304，让浏览器从缓存中读取文件。</p>
+<h3>减少页面重定向</h3>
+<p>页面每次重定向都会延迟页面内容返回等待时间，一次重定向大约需要600ms的时间开销，为了保证用户尽快看到页面内容，要竟然避免重定向</p>
+<h3>使用静态资源分域存放增加下载并行数</h3>
+<p>浏览器在同一时刻向同一个域名请求文件的并行下载数是有限的，因此可以利用多个域名的主机来存放不同的静态资源，增大页面的加载时资源的并行下载数，缩短页面资源加载的时间。通常根据多个域名来分别存储javaScirpt、CSS和图片文件。</p>
+<h3>使用静态资源CDN来存储文件</h3>
+<p>如果条件允许，可以利用CDN网络加快同一个地理区域内重复静态资源文件的响应下载速度，缩短资源请求时间。</p>
+<h3>使用CDN Combo 下载传输内容</h3>
+<p>CDN Combo是在CDN服务器端将多个文件请求打包成个一个文件的形式来返回的技术，这样可以实现HTTP连接传输的一次性复用，减少浏览器的HTTP请求速，加快资源下载的速度。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"//cdn.domain.com/path/a.js,b.js,c.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="使用可缓存的AJAX"><a href="#使用可缓存的AJAX" class="headerlink" title="使用可缓存的AJAX"></a>使用可缓存的AJAX</h3><p>对于返回内容相同的请求，没必要每次都直接从服务端拉取，合理使用AJAX缓存能加快AJAX响应速度并减轻服务器的压力。</p>
-<h3 id="使用GET来完成AJAX请求"><a href="#使用GET来完成AJAX请求" class="headerlink" title="使用GET来完成AJAX请求"></a>使用GET来完成AJAX请求</h3><p>使用XMLHttpRequest时，浏览器中的POST方法请求首先发送头文件，再发送HTTP正文数据。而使用GET的时只发送头部，所以在拉取服务端数据的时使用Get请求效率更高。</p>
-<h3 id="减少Cookie的大小并进行Cookie隔离"><a href="#减少Cookie的大小并进行Cookie隔离" class="headerlink" title="减少Cookie的大小并进行Cookie隔离"></a>减少Cookie的大小并进行Cookie隔离</h3><p>HTTP请求通常默认带上浏览器端的Cookie一起发送给服务端，所以在非必要的情况下，要尽量减少Cookie来减小HTTP请求大小。对于静态资源，尽量使用不同的域名来存放，因为Cookie默认是不能跨域的，这样就做到了不同域名下静态资源请求的Cookie隔离。</p>
-<h3 id="推荐使用异步JavaScript资源"><a href="#推荐使用异步JavaScript资源" class="headerlink" title="推荐使用异步JavaScript资源"></a>推荐使用异步JavaScript资源</h3><p>异步的JavaScript资源不会阻塞文档解析，所以允许在浏览器中优先渲染界面，延后加载脚本执行。例如JavaScript的引用可以如下设置，也可以使用模块化加载机制来实现。</p>
+<h3>使用可缓存的AJAX</h3>
+<p>对于返回内容相同的请求，没必要每次都直接从服务端拉取，合理使用AJAX缓存能加快AJAX响应速度并减轻服务器的压力。</p>
+<h3>使用GET来完成AJAX请求</h3>
+<p>使用XMLHttpRequest时，浏览器中的POST方法请求首先发送头文件，再发送HTTP正文数据。而使用GET的时只发送头部，所以在拉取服务端数据的时使用Get请求效率更高。</p>
+<h3>减少Cookie的大小并进行Cookie隔离</h3>
+<p>HTTP请求通常默认带上浏览器端的Cookie一起发送给服务端，所以在非必要的情况下，要尽量减少Cookie来减小HTTP请求大小。对于静态资源，尽量使用不同的域名来存放，因为Cookie默认是不能跨域的，这样就做到了不同域名下静态资源请求的Cookie隔离。</p>
+<h3>推荐使用异步JavaScript资源</h3>
+<p>异步的JavaScript资源不会阻塞文档解析，所以允许在浏览器中优先渲染界面，延后加载脚本执行。例如JavaScript的引用可以如下设置，也可以使用模块化加载机制来实现。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"main.js"</span> <span class="attr">defer</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"main.js"</span> <span class="attr">async</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="消除阻塞渲染的CSS及Javacript"><a href="#消除阻塞渲染的CSS及Javacript" class="headerlink" title="消除阻塞渲染的CSS及Javacript"></a>消除阻塞渲染的CSS及Javacript</h3><p>对于页面中加载时间过长的SCC或JavaScript文件，需要进行合理的拆分或延后加载，保证关键路径的资源能快速的加载完成。</p>
-<h3 id="避免使用CSS-import引用加载Css"><a href="#避免使用CSS-import引用加载Css" class="headerlink" title="避免使用CSS import引用加载Css"></a>避免使用CSS import引用加载Css</h3><p>CSS中的＠import可以从另一个样式文件中引入样式，但应该避免这种用法，因为这样会增加CSS资源加载的关键路径长度，带有＠import的CSS样式需要在CSS文件串行解析到@import时才会加载另外的CSS文件，大大延后CSS渲染完成的时间。</p>
+<h3>消除阻塞渲染的CSS及Javacript</h3>
+<p>对于页面中加载时间过长的SCC或JavaScript文件，需要进行合理的拆分或延后加载，保证关键路径的资源能快速的加载完成。</p>
+<h3>避免使用CSS import引用加载Css</h3>
+<p>CSS中的＠import可以从另一个样式文件中引入样式，但应该避免这种用法，因为这样会增加CSS资源加载的关键路径长度，带有＠import的CSS样式需要在CSS文件串行解析到@import时才会加载另外的CSS文件，大大延后CSS渲染完成的时间。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 不推荐 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">@import "path/main.css";</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 推荐 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"//cdn1.domain.com/path/main.css"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h3><h4 id="把CSS资源引用放到HTML文件顶部"><a href="#把CSS资源引用放到HTML文件顶部" class="headerlink" title="把CSS资源引用放到HTML文件顶部"></a>把CSS资源引用放到HTML文件顶部</h4><p>一般推荐将所有CSS资源尽早指定在HTML文档的<head>中，这样浏览器可以优先下载CSS并尽早完成页面的渲染</head></p>
-<h4 id="JavaScript资源引用放到HTML文件底部"><a href="#JavaScript资源引用放到HTML文件底部" class="headerlink" title="JavaScript资源引用放到HTML文件底部"></a>JavaScript资源引用放到HTML文件底部</h4><h4 id="减少DOM元素的数量和深度"><a href="#减少DOM元素的数量和深度" class="headerlink" title="减少DOM元素的数量和深度"></a>减少DOM元素的数量和深度</h4><h4 id="尽量避免使用-等慢元素"><a href="#尽量避免使用-等慢元素" class="headerlink" title="尽量避免使用 等慢元素"></a>尽量避免使用<table> <iframe>等慢元素</iframe></table></h4>
+<h3>渲染优化</h3>
+<h4>把CSS资源引用放到HTML文件顶部</h4>
+<p>一般推荐将所有CSS资源尽早指定在HTML文档的<head>中，这样浏览器可以优先下载CSS并尽早完成页面的渲染</head></p>
+<h4>JavaScript资源引用放到HTML文件底部</h4>
+<h4>减少DOM元素的数量和深度</h4>
+<h4>尽量避免使用 <code>&lt;table&gt;</code> <code>&lt;iframe&gt;</code> 等慢元素</h4>
+
                 <blockquote>
                 本文为原创文章，会经常更新知识点以及修正一些错误，因此转载请保留原出处，方便溯源，避免陈旧错误知识的误导，同时有更好的阅读体验。 <br/>
                 转载请注明来源：<a href="https://dayuan.tech/article/性能优化/" rel="noopener" title="https://dayuan.tech/article/性能优化/">https://dayuan.tech/article/性能优化/</a>
@@ -281,7 +308,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Web前端性能优化"><span class="toc-nav-text">Web前端性能优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#桌面端优化"><span class="toc-nav-text">桌面端优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#减少HTTP资源请求数"><span class="toc-nav-text">减少HTTP资源请求数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#减少HTTP请求大小"><span class="toc-nav-text">减少HTTP请求大小</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入"><span class="toc-nav-text">将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#为HTML制定Cache-Control或Expires"><span class="toc-nav-text">为HTML制定Cache-Control或Expires</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置Etag和Last-Modified"><span class="toc-nav-text">设置Etag和Last-Modified</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#减少页面重定向"><span class="toc-nav-text">减少页面重定向</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用静态资源分域存放增加下载并行数"><span class="toc-nav-text">使用静态资源分域存放增加下载并行数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用静态资源CDN来存储文件"><span class="toc-nav-text">使用静态资源CDN来存储文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用CDN-Combo-下载传输内容"><span class="toc-nav-text">使用CDN Combo 下载传输内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用可缓存的AJAX"><span class="toc-nav-text">使用可缓存的AJAX</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#使用GET来完成AJAX请求"><span class="toc-nav-text">使用GET来完成AJAX请求</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#减少Cookie的大小并进行Cookie隔离"><span class="toc-nav-text">减少Cookie的大小并进行Cookie隔离</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推荐使用异步JavaScript资源"><span class="toc-nav-text">推荐使用异步JavaScript资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#消除阻塞渲染的CSS及Javacript"><span class="toc-nav-text">消除阻塞渲染的CSS及Javacript</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#避免使用CSS-import引用加载Css"><span class="toc-nav-text">避免使用CSS import引用加载Css</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#渲染优化"><span class="toc-nav-text">渲染优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#把CSS资源引用放到HTML文件顶部"><span class="toc-nav-text">把CSS资源引用放到HTML文件顶部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JavaScript资源引用放到HTML文件底部"><span class="toc-nav-text">JavaScript资源引用放到HTML文件底部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#减少DOM元素的数量和深度"><span class="toc-nav-text">减少DOM元素的数量和深度</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#尽量避免使用-等慢元素"><span class="toc-nav-text">尽量避免使用 等慢元素</span></a></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">Web前端性能优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">桌面端优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">减少HTTP资源请求数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">减少HTTP请求大小</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">为HTML制定Cache-Control或Expires</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">设置Etag和Last-Modified</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">减少页面重定向</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">使用静态资源分域存放增加下载并行数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">使用静态资源CDN来存储文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">使用CDN Combo 下载传输内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">使用可缓存的AJAX</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">使用GET来完成AJAX请求</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">减少Cookie的大小并进行Cookie隔离</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">推荐使用异步JavaScript资源</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">消除阻塞渲染的CSS及Javacript</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">避免使用CSS import引用加载Css</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">渲染优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">把CSS资源引用放到HTML文件顶部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">JavaScript资源引用放到HTML文件底部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">减少DOM元素的数量和深度</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">尽量避免使用 &lt;table&gt; &lt;iframe&gt; 等慢元素</span></a></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
