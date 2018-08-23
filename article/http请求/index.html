@@ -8,17 +8,13 @@
     <meta name="baidu-site-verification" content="aUkeDDBeAZ" />
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Http请求的全过程
-首先要了解HTTP请求头和相应头
-HTTP请求request
-请求行 请求头 空行 请求数据
-请求行
-包括请求类型，GET,POST,PUT,DELETE等，请求访问的资源，最后一部分说明使用的版本比如HTTP1.1
-请求头部
-请求头一般有以下部分组成
+    <meta name="description" content="Http请求的全过程首先要了解HTTP请求头和相应头HTTP请求request请求行 请求头 空行 请求数据
+请求行包括请求类型，GET,POST,PUT,DELETE等，请求访问的资源，最后一部分说明使用的版本比如HTTP1.1
+请求头部请求头一般有以下部分组成
 
 Accept 请求接受类型，比如text/javascript
-Accept-Encoding 压缩格式，比如gzi...">
+Accept-Encoding 压缩格式，比如gzip
+Acc...">
     <meta name="keyword"  content=" http">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
@@ -167,14 +163,14 @@ Accept-Encoding 压缩格式，比如gzi...">
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -235,14 +231,9 @@ Accept-Encoding 压缩格式，比如gzi...">
                 col-lg-8 col-lg-offset-2
                 col-md-10 col-md-offset-1
                 post-container">
-                <h1>Http请求的全过程</h1>
-<h2>首先要了解HTTP请求头和相应头</h2>
-<h3>HTTP请求request</h3>
-<p>请求行 请求头 空行 请求数据</p>
-<h4>请求行</h4>
-<p>包括请求类型，GET,POST,PUT,DELETE等，请求访问的资源，最后一部分说明使用的版本比如HTTP1.1</p>
-<h4>请求头部</h4>
-<p>请求头一般有以下部分组成</p>
+                <h1 id="Http请求的全过程"><a href="#Http请求的全过程" class="headerlink" title="Http请求的全过程"></a>Http请求的全过程</h1><h2 id="首先要了解HTTP请求头和相应头"><a href="#首先要了解HTTP请求头和相应头" class="headerlink" title="首先要了解HTTP请求头和相应头"></a>首先要了解HTTP请求头和相应头</h2><h3 id="HTTP请求request"><a href="#HTTP请求request" class="headerlink" title="HTTP请求request"></a>HTTP请求request</h3><p>请求行 请求头 空行 请求数据</p>
+<h4 id="请求行"><a href="#请求行" class="headerlink" title="请求行"></a>请求行</h4><p>包括请求类型，GET,POST,PUT,DELETE等，请求访问的资源，最后一部分说明使用的版本比如HTTP1.1</p>
+<h4 id="请求头部"><a href="#请求头部" class="headerlink" title="请求头部"></a>请求头部</h4><p>请求头一般有以下部分组成</p>
 <ul>
 <li>Accept 请求接受类型，比如text/javascript</li>
 <li>Accept-Encoding 压缩格式，比如gzip</li>
@@ -260,14 +251,10 @@ Accept-Encoding 压缩格式，比如gzi...">
 <li>Connection: Upgrade</li>
 <li>Upgrade: websocket</li>
 </ul>
-<h4>请求内容</h4>
-<p>get请求这里为空，post这里存放请求数据</p>
-<h3>HTTP响应response</h3>
-<p>HTTP响应也由四个部分组成，分别是：状态行、消息报头、空行和响应正文。</p>
-<h4>状态行</h4>
-<p>HTTP/1.1）表明HTTP版本为1.1版本，状态码为200，状态消息为（ok）</p>
-<h4>消息报头</h4>
-<ul>
+<h4 id="请求内容"><a href="#请求内容" class="headerlink" title="请求内容"></a>请求内容</h4><p>get请求这里为空，post这里存放请求数据</p>
+<h3 id="HTTP响应response"><a href="#HTTP响应response" class="headerlink" title="HTTP响应response"></a>HTTP响应response</h3><p>HTTP响应也由四个部分组成，分别是：状态行、消息报头、空行和响应正文。</p>
+<h4 id="状态行"><a href="#状态行" class="headerlink" title="状态行"></a>状态行</h4><p>HTTP/1.1）表明HTTP版本为1.1版本，状态码为200，状态消息为（ok）</p>
+<h4 id="消息报头"><a href="#消息报头" class="headerlink" title="消息报头"></a>消息报头</h4><ul>
 <li>Date 相应时间</li>
 <li>Cache-control 缓存控制，max-age 相对过期时间</li>
 <li>Content-Type 内容类型，比如text/html;charset=utf-8</li>
@@ -275,66 +262,33 @@ Accept-Encoding 压缩格式，比如gzi...">
 <li>Etag 请求变量实体值</li>
 <li>last-Modified 最后修改时间</li>
 </ul>
-<h2>请求过程详解</h2>
-<ol>
+<h2 id="请求过程详解"><a href="#请求过程详解" class="headerlink" title="请求过程详解"></a>请求过程详解</h2><ol>
 <li>浏览器会先查询<code>Cache-Conrol</code>或者<code>Expires</code>，来查内容是否过期，如果未过期直接从缓存读取，不发送HTTP请求。否则进入下一步</li>
 <li>进行域名解析，然后解析出端口号，默认80 ，浏览器建立一条与服务器的tcp连接（三次握手）</li>
 <li>浏览器判断上次文件返回头中是否含有<code>Etag</code>信息，有则带上<code>if-None-Match</code>字段信息发送请求给服务端，服务端判断Etag未修改返回304，如果修改就返回200，否则进入下一步</li>
 <li>浏览器判断上次文件返回头中是否含有<code>Last-Modified</code>，有则带上<code>if-Modified-Since</code>字段信息发送请求，服务端判断是否失效，有返回200，有效则返回304</li>
 </ol>
-<h2>服务端返回状态码</h2>
-<ul>
-<li>
-<p>100：继续。客户端应继续其请求</p>
+<h2 id="服务端返回状态码"><a href="#服务端返回状态码" class="headerlink" title="服务端返回状态码"></a>服务端返回状态码</h2><ul>
+<li><p>100：继续。客户端应继续其请求</p>
 </li>
-<li>
-<p>101：切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议。websocket等</p>
+<li><p>101：切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议。websocket等</p>
 </li>
-<li>
-<p>200：OK，请求成功</p>
+<li><p>200：OK，请求成功</p>
 </li>
-<li>
-<p>201：已创建。成功请求并创建了新的资源</p>
-</li>
-<li>
-<p>202：已接受。已经接受请求，但未处理完成</p>
-</li>
-<li>
-<p>300：重定向，多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</p>
-</li>
-<li>
-<p>301：永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</p>
-</li>
-<li>
-<p>302：临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</p>
-</li>
-<li>
-<p>303：查看其它地址。与301类似。使用GET和POST请求查看</p>
-</li>
-<li>
-<p>304：未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</p>
-</li>
-<li>
-<p>400：客户端请求的语法错误，服务器无法理解</p>
-</li>
-<li>
-<p>401：请求要求用户的身份认证</p>
-</li>
-<li>
-<p>403：服务器理解请求客户端的请求，但是拒绝执行此请求</p>
-</li>
-<li>
-<p>404：服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&quot;您所请求的资源无法找到&quot;的个性页面</p>
-</li>
-<li>
-<p>406：请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体。</p>
-</li>
-<li>
-<p>500：服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。一般来说，这个问题都会在服务器的程序码出错时出现。</p>
-</li>
-<li>
-<p>501：服务器不支持当前请求所需要的某个功能。当服务器无法识别请求的方法，并且无法支持其对任何资源的请求。</p>
-</li>
+<li>201：已创建。成功请求并创建了新的资源</li>
+<li>202：已接受。已经接受请求，但未处理完成</li>
+<li>300：重定向，多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</li>
+<li>301：永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</li>
+<li>302：临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</li>
+<li>303：查看其它地址。与301类似。使用GET和POST请求查看</li>
+<li>304：未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</li>
+<li>400：客户端请求的语法错误，服务器无法理解</li>
+<li>401：请求要求用户的身份认证</li>
+<li>403：服务器理解请求客户端的请求，但是拒绝执行此请求</li>
+<li>404：服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置”您所请求的资源无法找到”的个性页面</li>
+<li>406：请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体。 </li>
+<li>500：服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。一般来说，这个问题都会在服务器的程序码出错时出现。</li>
+<li>501：服务器不支持当前请求所需要的某个功能。当服务器无法识别请求的方法，并且无法支持其对任何资源的请求。</li>
 </ul>
 
                 <blockquote>
@@ -369,7 +323,7 @@ Accept-Encoding 压缩格式，比如gzi...">
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">Http请求的全过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">首先要了解HTTP请求头和相应头</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">HTTP请求request</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">请求行</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">请求头部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">请求内容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">HTTP响应response</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">状态行</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">消息报头</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">请求过程详解</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-text">服务端返回状态码</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Http请求的全过程"><span class="toc-nav-text">Http请求的全过程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#首先要了解HTTP请求头和相应头"><span class="toc-nav-text">首先要了解HTTP请求头和相应头</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP请求request"><span class="toc-nav-text">HTTP请求request</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#请求行"><span class="toc-nav-text">请求行</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#请求头部"><span class="toc-nav-text">请求头部</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#请求内容"><span class="toc-nav-text">请求内容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP响应response"><span class="toc-nav-text">HTTP响应response</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#状态行"><span class="toc-nav-text">状态行</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#消息报头"><span class="toc-nav-text">消息报头</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#请求过程详解"><span class="toc-nav-text">请求过程详解</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#服务端返回状态码"><span class="toc-nav-text">服务端返回状态码</span></a></li></ol></li></ol>
         
         </div>
       </aside>
