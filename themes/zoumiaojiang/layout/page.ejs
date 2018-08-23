@@ -99,8 +99,8 @@ layout: layout
                                 owner: '<%= config.github_issue_comments %>',
                                 repo: '<%= config.github_issue_comments %>.github.io',
                                 oauth: {
-                                    client_id: 'da14bf98138076476f70',
-                                    client_secret: 'a7ce31d619df43bd15798cc9f05996a6aa8f36d2',
+                                    client_id: '<%= config.github_client_id %>',
+                                    client_secret: '<%= config.github_client_secret %>',
                                 }
                             })
                             gitment.render('comments-container');

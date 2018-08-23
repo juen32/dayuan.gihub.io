@@ -46,7 +46,9 @@ anchorjs: true                          # if you want to customize anchor. check
 # Disqus settings
 # disqus_username: zoumiaojiang-com
 
-# github_issue_comments: 'zoumiaojiang'
+github_issue_comments: 'juen32'
+github_client_id: '9ae7cea4dd7f3bf61e1e'
+github_client_secret: '44b0529afbe06a160eae03153f36de20f7a48642'
 
 # # Analytics settings
 # # Baidu Analytics
