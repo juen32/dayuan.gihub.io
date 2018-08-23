@@ -25,7 +25,7 @@ SEOTitle: Dayuan's Blog
 email: youyuan_lin@163.com
 description: "我叫林大元，平常喜欢到处旅游走走，喜欢看NBA，喜欢喝喝小酒，打打游戏，喜欢一切科技以及新鲜的事物，希望大家多多指教o(∩_∩)o。"
 keyword: "前端, Web, 林大元, 博客"
-header-img: img/header_img/timg.jpg
+header-img: img/header_img/header-bg.jpg
 signature: false #show signature
 signature-img:
 
@@ -64,7 +64,7 @@ widgets:
   - featured-tags
   - short-about
   - recent-posts
-  - friends-blog
+  # - friends-blog
   - archive
   - category
 
@@ -78,16 +78,16 @@ featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 0            # A tag will be featured if the size of it is more than this condition value
 
 ## Friends
-friends: [
-    {
-      title: "ielgnaw",
-      href: "https://ielgnaw.com"
-    },
-    {
-      title: "EFE",
-      href: "http://efe.baidu.com"
-    }
-]
+# friends: [
+#     {
+#       title: "ielgnaw",
+#       href: "https://ielgnaw.com"
+#     },
+#     {
+#       title: "EFE",
+#       href: "http://efe.baidu.com"
+#     }
+# ]
 
 #Custom Setting End
 
@@ -166,7 +166,7 @@ sitemap:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@git.coding.net:linyouyuan/linyouyuan.coding.me.git
+  repository: git@github.com:juen32/juen32.github.io.git
   branch: master
 
 
@@ -191,7 +191,7 @@ service_worker:
       handler: cacheFirst
       options:
         origin: buttons.github.io
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: zoumiaojiang.disqus.com
+    # - urlPattern: /*
+    #   handler: cacheFirst
+    #   options:
+    #     origin: zoumiaojiang.disqus.com

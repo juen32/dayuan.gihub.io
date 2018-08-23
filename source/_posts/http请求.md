@@ -2,6 +2,8 @@
 title: http请求
 date: 2018-04-29 14:13:56
 tags: http
+header-img: "/img/header_img/content-bg.jpg"
+catalog: true
 ---
 
 # Http请求的全过程

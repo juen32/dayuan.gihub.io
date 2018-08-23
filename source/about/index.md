@@ -2,7 +2,7 @@
 layout: "about"
 title: "About"
 description: "Wish for the Best, Prepare for the Worst"
-header-img: "img/header_img/shadow.jpg"
+header-img: "img/header_img/about_header.jpg"
 comments: true
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: 使用create-react-app添加css modules、sasss和antd
-tags:
-catalog: true
+tags: React
 date: 2018-08-21 01:03:59
 subtitle:
-header-img:
+header-img: "/img/header_img/content-bg.jpg"
+catalog: true
 ---
 
 # 前言
